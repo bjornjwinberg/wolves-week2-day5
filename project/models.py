@@ -4,11 +4,9 @@ class Gameboard:
 	def __init__(self):
 		self.board = []
 
-	def seed_board(self):
+	def print_board(self):
 		for x in range(10):
 			self.board.append(" ~ "*10)
-
-	def print_board(self):
 		print('   ', '    '.join([(str(x) + " ") for x in range(1,11)]))
 		x = 65
 		for row in self.board:
@@ -17,17 +15,14 @@ class Gameboard:
 			x+=1
 
 class Player:
-	def __init__(self, name, ):
+	def __init__(self, name, board = None):
 		self.name = name
+		board = Gameboard()
+		self.board = board
 
-
-
-class Ship:
-	def __init__(self, length, starting_point, position):
-		self.length = length
-		self.starting_point = starting_point
-		self.position = position
-
-new = Gameboard()
-new.seed_board()
-new.print_board()
+#
+# class Ship:
+# 	def __init__(self, length, starting_point, position):
+# 		self.length = length
+# 		self.starting_point = starting_point
+# 		self.position = position

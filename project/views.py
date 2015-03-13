@@ -4,7 +4,7 @@ class View:
 	def __init__(self):
 		pass
 
-	def welcome_first(self):
+	def welcome(self):
 		print ("Welcome to Battleship!!!!!  Hope you brought a life-jacket?")
 
 	def first_player(self):
