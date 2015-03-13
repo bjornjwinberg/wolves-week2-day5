@@ -1,6 +1,6 @@
-import models
-import views
+from models import *
+from views import UserInteraction
 
-class Controller:
+class Game:
 	def __init__(self):
-		pass
+		self.
