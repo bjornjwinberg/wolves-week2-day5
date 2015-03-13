@@ -1,17 +1,26 @@
 import sqlite3
 
-class Board():
+class Gameboard:
 	def __init__(self):
-		self.game_board = []
-
-	def seed_game_board(self):
-		for x in range(10):
-			self.game_board.append("~" * 10)
+		self.board = []
 
 	def print_board(self):
-		for line in self.game_board:
-			print (' '.join(line))
+		for x in range(10):
+			self.board.append(" ~ "*10)
+		print('   ', '    '.join([(str(x) + " ") for x in range(1,11)]))
+		x = 65
+		for row in self.board:
+			print(chr(x), ' '.join(row))
+			print()
+			x+=1
 
-class Ship(self):
-	def __init__(self):
-		pass
+class Player:
+	def __init__(self, name, board = None):
+		self.name = name
+		self.board = Gameboard()
+
+class Ship:
+	def __init__(self, length, starting_point, position):
+		self.length = length
+		self.starting_point = starting_point
+		self.position = position
