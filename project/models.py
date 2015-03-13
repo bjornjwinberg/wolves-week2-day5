@@ -1,10 +1,6 @@
 import sqlite3
 
-class Model:
-	def __init__(self):
-		pass
-
-class Board:
+class Gameboard:
 	def __init__(self):
 		self.board = []
 
@@ -13,13 +9,12 @@ class Board:
 			self.board.append(" ~ "*10)
 
 	def print_board(self):
-		ocean = []
 		print('   ', '    '.join([(str(x) + " ") for x in range(1,11)]))
 		x = 65
 		for row in self.board:
 			print(chr(x), ' '.join(row))
 			x+=1
 
-new = Board()
+new = Gameboard()
 new.seed_board()
 new.print_board()
