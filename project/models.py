@@ -16,6 +16,18 @@ class Gameboard:
 			print()
 			x+=1
 
+class Player:
+	def __init__(self, name, ):
+		self.name = name
+
+
+
+class Ship:
+	def __init__(self, length, starting_point, position):
+		self.length = length
+		self.starting_point = starting_point
+		self.position = position
+
 new = Gameboard()
 new.seed_board()
 new.print_board()
