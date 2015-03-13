@@ -13,6 +13,7 @@ class Gameboard:
 		x = 65
 		for row in self.board:
 			print(chr(x), ' '.join(row))
+			print()
 			x+=1
 
 new = Gameboard()
